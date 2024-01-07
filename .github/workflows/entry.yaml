@@ -18,4 +18,12 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
       - name: Curl
-        run: curl 10.128.0.5
+        run: |
+          response=$(curl -o /dev/null -s -w "%{http_code}" -m 30 10.128.0.5)
+          if [[ $response -eq 200 ]]; then
+            echo "Response is 200"
+          else
+            echo "Response is not 200"
+            exit 1
+          fi
+          
