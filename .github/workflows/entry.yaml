@@ -19,7 +19,7 @@ jobs:
           tags: tag:ci
       - name: Curl
         run: |
-          response=$(curl -o /dev/null -s -w "%{http_code}" -m 30 10.128.0.5)
+          response=$(curl -o /dev/null -s -w "%{http_code}" -m 30 10.1.0.5)
           if [[ $response -eq 200 ]]; then
             echo "Response is 200"
           else
