@@ -11,4 +11,4 @@ var.AUTH_KEY
   Enter a value: 
 ```
 
-The value can be found in the `dev1` project, its named `tailscale-auth-key`
+The value can be found in the `dev1` project secret manager, its named `tailscale-auth-key`
