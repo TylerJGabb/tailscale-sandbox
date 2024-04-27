@@ -9,6 +9,10 @@ This is a tailscale sandbox. Right now its just github actions and terraform
 4. whenever a commit is pushed to this branch the GHA connect to the tailnet and ping the nginx VM, to prove that things are setup correctly
 5. tailscale settings can be found at https://login.tailscale.com/admin/acls/file
 
+# Gotchas
+- The way that tags are managed for the subnet router are not well known by me. I think its handled via the auth key.
+- I'm using an auth key right now, which is not ideal. Should be using oauth.
+
 # Running Terraform
 
 Right now I am using an auth key, the final solution will use oauth in the startup script of the subnet router
@@ -20,4 +24,6 @@ var.AUTH_KEY
   Enter a value: 
 ```
 
-The value can be found in the `dev1` project secret manager, its named `tailscale-auth-key`
+~The value can be found in the `dev1` project secret manager, its named `tailscale-auth-key`~
+Since the project has been torn down this no longer exists. You'll have to generate a new auth key in TS
+
