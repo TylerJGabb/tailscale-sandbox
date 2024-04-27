@@ -1,6 +1,8 @@
 This is a tailscale sandbox. Right now its just github actions and terraform
 
-# This infrastructure has been torn down. Re-run the terraform to stand it back up
+# This infrastructure has been torn down
+- Re-run the terraform to stand it back up
+- You'll need to create a new project and state bucket
 
 # What does this project do?
 1. creates a VPC in GCP, with firewalls and cloud NAt
